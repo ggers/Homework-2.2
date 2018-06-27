@@ -17,7 +17,13 @@ def count_frequency(target_file):
     data = open_file_txt(target_file)
     l_text = data.split()
     s_text = set(data.split())
-    print(sorted(zip([l_text.count(w) for w in s_text], s_text), reverse=True)[0])
+    array = sorted(zip([l_text.count(w) for w in s_text], s_text), reverse=True)
+    for i in array:
+        if len(i[1])<7:
+            continue
+        else:
+            print("Самое популярное слово длиной более 6 символов в этом файле {}. Оно встречается {} раз".format(i[1], i[0]))
+            break
 
 
 def main():
