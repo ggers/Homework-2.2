@@ -50,4 +50,4 @@ def main():
         else:
             print("команда неверна попробуйте ещё раз")
 
-main()
+if  __name__ ==  "__main__" :    main()
